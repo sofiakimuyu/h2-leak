@@ -96,8 +96,8 @@ def simulate(T=293.15, P=101325.0, V0=0.01, dt=0.0001, t_max=5.0):
 #Run & print
 hist = simulate()
 
-print("t[s]    z[m]    v[m/s]   V[m3]   m_air[kg]  m_H2[kg]  rho_p[kg/m3]")
+print("t[s]    z[m]    v[m/s] ")
 for row in hist[:: max(1, len(hist)//20)]:
     t,z,v,V,m_air,m_h2,rho_p = row
-    print(f"{t:6.3f}  {z:7.3f}  {v:7.3f}  {V:9.5f}  {m_air:9.5f}  {m_h2:9.5f}  {rho_p:8.4f}")
+    print(f"{t:6.3f}  {z:7.3f}  {v:7.3f} ")
 
